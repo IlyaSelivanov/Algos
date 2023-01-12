@@ -26,4 +26,26 @@ public class SortingTest
 
         Assert.IsTrue(expectedArray.SequenceEqual(sortedArray));
     }
+
+    [TestMethod]
+    public void SelectionSortAsc_Test()
+    {
+        int[] array = new int[] { 5, 7, 0, -5, 3, 9 };
+        int[] expectedArray = new int[] {-5, 0, 3, 5, 7, 9 };
+
+        var sortedArray = array.SelectionSortAsc();
+
+        Assert.IsTrue(expectedArray.SequenceEqual(sortedArray));
+    }
+
+    [TestMethod]
+    public void SelectionSortDesc_Test()
+    {
+        int[] array = new int[] { 5, -5, 3, 7, 0, -5, 3, 9, 0 };
+        int[] expectedArray = new int[] { 9, 7, 5, 3, 3, 0, 0, -5, -5 };
+
+        var sortedArray = array.SelectionSortDesc();
+
+        Assert.IsTrue(expectedArray.SequenceEqual(sortedArray));
+    }
 }

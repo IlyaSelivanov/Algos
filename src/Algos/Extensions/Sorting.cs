@@ -52,8 +52,10 @@ namespace Algos.Algorithmes
 
                 while(j < array.Length)
                 {
-                    if(array[j].CompareTo(array[i]) < 0)
+                    if(array[j].CompareTo(array[minIndex]) < 0)
                         minIndex = j;
+
+                    j++;
                 }
 
                 var tmp = array[i];
@@ -74,8 +76,10 @@ namespace Algos.Algorithmes
 
                 while(j < array.Length)
                 {
-                    if(array[j].CompareTo(array[i]) > 0)
+                    if(array[j].CompareTo(array[minIndex]) > 0)
                         minIndex = j;
+
+                    j++;
                 }
 
                 var tmp = array[i];
